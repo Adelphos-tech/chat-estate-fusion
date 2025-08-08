@@ -1,13 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import ChatPanel from "@/components/chat/ChatPanel";
+import RealEstatePanel from "@/components/realestate/RealEstatePanel";
+import { Helmet } from "react-helmet-async";
 
 const Index = () => {
+  const canonical = typeof window !== "undefined" ? window.location.href : "";
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Chat Estate Fusion",
+    url: canonical || "https://example.com",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${canonical}?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="min-h-screen grid grid-cols-1 md:grid-cols-2">
+      <Helmet>
+        <title>Chat Estate Fusion — Ask anything | Works, About, Contact</title>
+        <meta
+          name="description"
+          content="Ask anything with a sleek chat on the left and explore our real estate Works, About, and Contact on the right."
+        />
+        {canonical && <link rel="canonical" href={canonical} />}
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </Helmet>
+      <ChatPanel />
+      <RealEstatePanel />
+    </main>
   );
 };
 

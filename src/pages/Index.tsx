@@ -17,7 +17,7 @@ const Index = () => {
   };
 
   return (
-    <main className="min-h-screen grid grid-cols-1 md:grid-cols-2">
+    <main className="min-h-screen grid grid-cols-1 md:grid-cols-2 ambient-spotlights text-primary-foreground">
       <Helmet>
         <title>Chat Estate Fusion — Ask anything | Works, About, Contact</title>
         <meta

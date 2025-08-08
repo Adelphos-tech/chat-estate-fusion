@@ -9,26 +9,26 @@ import property3 from "@/assets/property-3.jpg";
 
 const RealEstatePanel = () => {
   return (
-    <section className="relative h-full min-h-[70vh] p-8 ambient-spotlights text-primary-foreground">
+    <section className="relative h-full min-h-[70vh] p-8 text-primary-foreground">
       <div className="max-w-3xl mx-auto">
         <header className="mb-6">
           <div className="flex items-center gap-3">
-            <img src="/lovable-uploads/76993f42-5917-431a-ac88-09bd32a08b1b.png" alt="AIQ real estate company logo" className="h-8 w-8 md:h-10 md:w-10" loading="lazy" />
+            <img src="/lovable-uploads/76993f42-5917-431a-ac88-09bd32a08b1b.png" alt="AIQ real estate company logo" className="h-12 w-12 md:h-14 md:w-14" loading="lazy" />
             <div>
-              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Estate Works</h2>
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Real Estate</h2>
               <p className="text-muted-foreground mt-1">Discover our projects and get in touch.</p>
             </div>
           </div>
         </header>
 
-        <Tabs defaultValue="works" className="w-full">
+        <Tabs defaultValue="real-estate" className="w-full">
           <TabsList className="grid w-full grid-cols-3">
-            <TabsTrigger value="works">Works</TabsTrigger>
+            <TabsTrigger value="real-estate">Real Estate</TabsTrigger>
             <TabsTrigger value="about">About</TabsTrigger>
             <TabsTrigger value="contact">Contact</TabsTrigger>
           </TabsList>
 
-          <TabsContent value="works" className="mt-6">
+          <TabsContent value="real-estate" className="mt-6">
             <div className="grid md:grid-cols-2 gap-6">
               <Card className="overflow-hidden bg-background/5 border-border/20 text-primary-foreground">
                 <img src={property1} alt="Modern glass-front home exterior, golden hour" loading="lazy" />

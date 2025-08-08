@@ -9,11 +9,16 @@ import property3 from "@/assets/property-3.jpg";
 
 const RealEstatePanel = () => {
   return (
-    <section className="h-full min-h-[70vh] p-8 bg-background">
+    <section className="relative h-full min-h-[70vh] p-8 ambient-spotlights text-primary-foreground">
       <div className="max-w-3xl mx-auto">
         <header className="mb-6">
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Estate Works</h2>
-          <p className="text-muted-foreground mt-1">Discover our projects and get in touch.</p>
+          <div className="flex items-center gap-3">
+            <img src="/lovable-uploads/76993f42-5917-431a-ac88-09bd32a08b1b.png" alt="AIQ real estate company logo" className="h-8 w-8 md:h-10 md:w-10" loading="lazy" />
+            <div>
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Estate Works</h2>
+              <p className="text-muted-foreground mt-1">Discover our projects and get in touch.</p>
+            </div>
+          </div>
         </header>
 
         <Tabs defaultValue="works" className="w-full">
@@ -25,7 +30,7 @@ const RealEstatePanel = () => {
 
           <TabsContent value="works" className="mt-6">
             <div className="grid md:grid-cols-2 gap-6">
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden bg-background/5 border-border/20 text-primary-foreground">
                 <img src={property1} alt="Modern glass-front home exterior, golden hour" loading="lazy" />
                 <CardHeader>
                   <CardTitle>Contemporary Haven</CardTitle>
@@ -34,7 +39,7 @@ const RealEstatePanel = () => {
                   <p className="text-sm text-muted-foreground">4 bed • 3 bath • 2,800 sqft</p>
                 </CardContent>
               </Card>
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden bg-background/5 border-border/20 text-primary-foreground">
                 <img src={property2} alt="Luxury penthouse living room with city skyline view" loading="lazy" />
                 <CardHeader>
                   <CardTitle>Skyline Penthouse</CardTitle>
@@ -43,7 +48,7 @@ const RealEstatePanel = () => {
                   <p className="text-sm text-muted-foreground">Downtown • Private terrace</p>
                 </CardContent>
               </Card>
-              <Card className="overflow-hidden md:col-span-2">
+              <Card className="overflow-hidden md:col-span-2 bg-background/5 border-border/20 text-primary-foreground">
                 <img src={property3} alt="Charming suburban home with manicured lawn" loading="lazy" />
                 <CardHeader>
                   <CardTitle>Suburban Retreat</CardTitle>
@@ -56,7 +61,7 @@ const RealEstatePanel = () => {
           </TabsContent>
 
           <TabsContent value="about" className="mt-6">
-            <Card>
+            <Card className="bg-background/5 border-border/20 text-primary-foreground">
               <CardHeader>
                 <CardTitle>About Our Studio</CardTitle>
               </CardHeader>
@@ -75,7 +80,7 @@ const RealEstatePanel = () => {
           </TabsContent>
 
           <TabsContent value="contact" className="mt-6">
-            <Card>
+            <Card className="bg-background/5 border-border/20 text-primary-foreground">
               <CardHeader>
                 <CardTitle>Contact</CardTitle>
               </CardHeader>

@@ -56,7 +56,7 @@ const ChatPanel = () => {
 
   return (
     <section
-      className="relative h-full min-h-[70vh] flex flex-col justify-between bg-foreground text-primary-foreground ambient-spotlights p-8"
+      className="relative h-full min-h-[70vh] flex flex-col justify-between ambient-spotlights text-primary-foreground p-8"
       aria-label="Chat interface"
     >
       <div className="mx-auto max-w-2xl w-full text-center pt-8">
